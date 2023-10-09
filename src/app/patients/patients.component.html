@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+<div *ngIf="service.isLoading$ | async">Loading...</div>
+
+<div class="" style="background-color: #F8F9FA;" >
+    <div class="container headpart mt-4">
+        <h3 class="patients">Patients</h3>
+        <button class="btn-lg downloadbtn" [disabled]="!hasData" (click)="exportexcel()">Download</button>
+    </div>
+
+   <div class="container">
+    <div class="tabledata py-2 mt-3">
+      <div class="headpart">
+          <div class="ml-3 mt-2">
+            <h3 class="patientslist">Patients List </h3>
+          <small class="ml-1 patientnum">{{data.length}} Patients</small>
+          </div>
+          <span class="mr-3" >
+         <input type="search"  (click)="removeImage()" [(ngModel)]="searchTerm" (ngModelChange)="applySearchFilter()"  placeholder="      Search With name" class="form-control inputfield">
+          <img *ngIf="showImage" src="../../assets/images/search 1 (1).svg" class="searchicon" alt=""/>
+
+          </span>
+      </div>
+
+      
+  <div class="customtable" id="exceltable">
+    
+    <div *ngIf="this.data.length === 0">
+      <h4 class="nodata">No data to Display</h4>
+      </div>
+    <div *ngIf="this.data.length !== 0">
+    <table>
+      <thead>
+        <tr>
+          <th>S.No</th>
+              
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Mobile Number</th>
+              <!-- <th>Email</th> -->
+              <th>Date</th>
+              <th>Total Appointments</th>
+              <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let data of data, let i=index">
+          <td>{{ i + 1 }}</td>
+          <td>{{data.patient_name}}</td>
+          <td>{{data.age}}</td>
+          <td>{{data.gender}}</td>
+          <td>{{data.mobile}}</td>
+          <!-- <td>{{data.email}}</td> -->
+          <td>{{data.date}}</td>
+          <td>{{data.appointments}}</td>
+          <td>
+            <!-- <a  (click)="getPatientsData(data)"  [state]="data"><img src="../../assets/images/eye.svg" class="eyeimg" alt="" ></a></td>
+         -->
+          <a  [routerLink]="['patientsprofile/{{data.patient_id}}']"  (click)="viewProfile(data.patient_id)"><img src="../../assets/images/eye.svg" class="eyeimg" alt="" ></a></td>
+
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+   
+</div>
+</div>
+   </div>
+
+</div>

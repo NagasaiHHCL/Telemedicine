@@ -1,0 +1,294 @@
+.downloadbtn {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.24px;
+  float: right;
+  color: #FFFFFF;
+  padding: 10px 2 5px;
+  background: #1E58FA;
+  border: 1px solid #1E58FA;
+  border-radius: 8px;
+
+}
+
+button {
+  color: #FFFFFF;
+  background: #1E58FA;
+  border: 1px solid #1E58FA;
+  border-radius: 8px;
+}
+
+.doctorp {
+
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 39px;
+  /* identical to box height */
+
+  letter-spacing: -0.24px;
+
+  color: #000000;
+
+}
+
+select {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: -0.24px;
+
+  color: #000000;
+  background: #FFFFFF;
+  border: 1px solid #CFCFCF;
+  border-radius: 8px;
+}
+
+.searchicon {
+  top: 40%;
+  position: absolute;
+  left: 11%;
+  font-size: 20px;
+  width: 18px;
+}
+
+@media only screen and (max-width:565px) {
+  table {
+    width: 400px;
+    overflow: scroll;
+  }
+
+  .juscon {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .searchicon {
+    top: 27%;
+    position: absolute;
+    left: 17%;
+    font-size: 20px;
+    width: 18px;
+  }
+}
+
+.customtable {
+  height: 350px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.customtable table {
+  position: relative;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.customtable td,
+.customtable th {
+  padding: 0.25em;
+}
+
+
+.customtable thead th {
+  position: -webkit-sticky;
+  /* for Safari */
+  position: sticky;
+  top: 0;
+  background: #EEEEEE;
+  ;
+  color: #000;
+  z-index: 1;
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: -0.24px;
+  border-bottom: 1px solid #EAEAEA;
+  color: #000000;
+}
+
+.customtable tbody td {
+  position: -webkit-sticky;
+  /* for Safari */
+  position: sticky;
+  top: 0;
+  background: #fff;
+  color: #000;
+  z-index: 0px;
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 26px;
+  /* identical to box height */
+  border-bottom: 1px solid #EAEAEA;
+  letter-spacing: -0.24px;
+  padding: 15px 5px;
+
+  color: #000000;
+
+}
+
+.tabledata {
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.doctorlist {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 10px;
+  /* identical to box height */
+
+  letter-spacing: -0.24px;
+
+  color: #000000;
+}
+
+.docount {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 10px;
+  letter-spacing: -0.24px;
+
+  color: #000000;
+}
+
+::placeholder {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  /* identical to box height */
+
+  letter-spacing: -0.24px;
+
+  color: #000000;
+}
+
+.inputfield {
+  background: #FFFFFF;
+  border: 1px solid #CFCFCF;
+  border-radius: 8px;
+  padding: 5px 10px;
+  height: 45px;
+}
+
+.inputfields {
+  background: #FFFFFF;
+  border: 1px solid #CFCFCF;
+  border-radius: 8px;
+  height: 45px;
+  padding: 20px 0px;
+}
+
+.eyeimg {
+  width: 18px;
+}
+
+.sortby {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 12px;
+  letter-spacing: -0.24px;
+  white-space: nowrap;
+  margin-top: 15px;
+  color: #555555 !important;
+}
+
+.nodata{
+  text-align: center;
+  margin-top: 10%;
+}
+
+  
+.custom-select {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  height: 45px;
+
+	padding: 0;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+.custom-select:hover {
+	border-color: #999;
+}
+
+.custom-select:before {
+	color: #333;
+	display: block;
+	font-family: 'FontAwesome';
+	font-size: 1em;
+	height: 100%;
+	line-height: 2.5em;
+
+	position: absolute;
+	top: 0;
+	right: 100px;
+	text-align: center;
+	width: 1em;
+	z-index: -1;
+}
+
+.custom-select select {
+	background-color: transparent;
+	border: 0 none;
+	box-shadow: none;
+	color: #333;
+	display: block;
+	font-size: 100%;
+	line-height: normal;
+	margin: 0;
+	padding: .5em;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.custom-select select::-ms-expand {
+	display: none; /* to ie 10 */
+}
+
+.custom-select select:focus {
+	outline: none;
+}
+
+/* little trick for custom select elements in mozilla firefox  17/06/2014 @rodrigoludgero */
+
+/* pseudo class https://developer.mozilla.org/en-US/docs/Web/CSS/:any */
+
+:-moz-any(.custom-select):before {
+	background-color: #fff; /* this is necessary for overcome the caret default browser */
+	pointer-events: none; /* https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events  */
+	z-index: 1; /* this is necessary for overcome the pseudo element */
+}

@@ -1,0 +1,63 @@
+<!-- <button (click)="disableSelector()">Disable Selector</button> -->
+<div *ngIf="service.isLoading$ | async">Loading...</div>
+
+<div class="container-fluid backgrd">
+    <div class="row p-4">
+        <div class="col-md-6 mt-2 align-self-start">
+            <div class="row">
+                <div class="col-md-8 mt-5">
+                    <div class="" style="margin-top:10%;">
+                        <span><img src="../../assets/images/Group 190.svg" class="logoimg" alt="logo"></span>
+                        <!-- <span class="medicatext ml-3 mt-3">Medica</span> -->
+            
+                      <div class="spaceg">
+                        <p class="logintext">Log In to your account</p>
+            
+                        <h5 class="nttext">enter your employee id and password to login</h5>
+            
+                      </div>
+                       <form  [formGroup]="loginForm"  (ngSubmit)="adminlogin()">
+                        <div class="form-group mt-3">
+                            <label for="">Employee ID</label>
+                        <input type="text" class="form-control" formControlName="username" id="lognames"[(ngModel)]="logname" placeholder="Enter Your Employee ID">
+                        <div *ngIf="username.invalid && (username.dirty || username.touched || formSubmitted)">
+                            <div class="errortxt" *ngIf="username.errors.required">Username is required.</div>
+                          </div>
+                        </div>
+                        <div class="form-group passwordicon mt-3">
+                            <label for="">Password</label>
+                        <!-- <input type="{{ showPassword ? 'text' : 'password' }}" formControlName="password" id="logpasswords" [(ngModel)]="logpassword" class="form-control" placeholder="Enter Your Password"> <span><img class="eyeicon" (click)="togglePasswordVisibility()" src="../../assets/images/eye.svg" alt=""> -->
+                            <!-- <img class="eyeicon" id="eyeimage" (click)="togglePasswordVisibility()" src="../../assets/images/eye.svg" alt=""> -->
+                            <!-- <img class="eyeicon" id="eyeimage" (click)="togglePasswordVisibility()" [src]="" alt=""> -->
+                            <input id="password" matInput placeholder="password" [(ngModel)]="logpassword"
+                            class="form-control login-controls" [type]="hide ? 'password' : 'text'"
+                            formControlName="password" />
+                          
+                            <div *ngIf="password.invalid && (password.dirty || password.touched || formSubmitted)">
+                                <div class="errortxt" *ngIf="password.errors.required">Password is required.</div>
+                              </div>
+                          <i class="material-icons eyeicon" matSuffix   (click)="hide = !hide">
+                            {{ hide ? "visibility_off" : "visibility" }}
+                          </i>
+                            
+                        <!-- </span> -->
+                        </div>
+            
+            
+                        <button  class="loginbtn form-control mt-4 text-center" (click)="adminlogin()">Log In</button>
+                       </form>
+                       </div>
+                </div>
+            </div>
+          
+        </div>
+      
+        <div class="col-md-6 mt-5">
+            <div >
+            <img class="imgframe" src="../../assets/images/Frame 1.png" alt="">
+
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,129 @@
+
+<app-navbar></app-navbar>
+<div *ngIf="service.isLoading$ | async">Loading...</div>
+
+<div class="container" style="background-color: #F8F9FA;">
+  <div class="container p-4">
+    <h3 class="welcometext">Welcome ADMIN,</h3>
+    <div class="row pt-3 pb-4">
+        <div class="col-md-4 mt-2">
+            <div class="boldtext p-3">
+               <a routerLink="/doctors"> <img class="imglogo mr-3" src="../../assets/images/Group 13.png" alt="">{{Data.doctorsCount}}<br> Doctors ></a>
+            </div>
+        </div>
+        <div class="col-md-4 mt-2">
+            <div class="boldtext p-3">
+                <a routerLink="/patients"><img class="imglogo mr-3" src="../../assets/images/Group 14.png" alt="">{{Data.patientsCount}}<br> Patients ></a>
+            </div>
+        </div>
+        <div class="col-md-4 mt-2">
+            <div class="boldtext p-3">
+                <a routerLink="/appointments">
+    
+                    <img class="mr-3 imglogo" src="../../assets/images/Group 17.png" alt="">{{Data.appointmentsCount}}<br> Appointments >
+    
+                </a>
+            </div>
+        </div>
+    
+        
+       
+    </div>
+    
+    
+    <div class="container dashboard">
+    <div class="container displayfl"  >
+    
+           <span class="mt-2"> 
+            <h5 class="todayapp">Today's Appointments </h5>
+            <p class="belowtxt">{{Data.appointmentsList?.length}} Appointments</p>
+           </span>
+            
+       
+       
+    
+    <div class="juscon" style="display: flex;justify-content: space-between;" >
+        
+      <h5 class="sortby">Sort By:</h5>
+      <div class="custom-select  mr-3">
+
+      <select class="form-select form-control inputfield" [(ngModel)]="selectspl" (click)="getdoctorspecial()"   aria-label="Default select example">
+      <option class="option" value="0" selected>Specialization</option>
+      <option *ngFor="let data of spldata; let i=index" value="{{data.DEPT_ID}}">{{data.DEPT_NAME}}</option>
+
+    </select>
+    </div>
+    <div class="custom-select  mr-3">
+    
+      <select class="form-select form-control inputfield" [(ngModel)]="selectedOption" (change)="handleSelectionChange()"     aria-label="Default select example">
+          <option  class="option" value="" selected>State</option>
+          <option *ngFor="let data of statedata; let i=index"  value={{data.locationid}}>{{data.locationname}}</option>
+    
+        </select>
+    </div>
+    <div class="custom-select  mr-3">
+    
+      <select class="form-select form-control mr-3 inputfield" [(ngModel)]="selectedCity" (change)="getcity()" aria-label="Default select example">
+          <option  class="option" value="" selected>City</option>
+    
+          <option *ngFor="let data of citydata; let i=index" value="{{data.locationid}}">{{data.locationname}}</option>
+    
+        </select>
+    </div>
+    
+    
+      <!-- <select class="form-select form-control mr-3 inputfield" aria-label="Default select example">
+          <option  class="option" value="" selected>--Area--</option>
+          <option *ngFor="let data of citydata; let i=index" value="{{data}}">{{data}}</option>
+    
+        </select> -->
+    
+      </div>
+    </div>
+      
+    
+    <div class="customtable">
+      <div *ngIf="this.appointments.length === 0">
+        <h4 class="nodata">No Data to Display</h4>
+        </div>
+      <div *ngIf="this.appointments.length !== 0">
+        <table>
+          <thead >
+            <tr>
+                <th>Patient</th>
+                <th>Doctor</th>
+                <th>Department</th>
+                <th>Time</th>
+                <th>State</th>
+                <th>City</th>
+                <!-- <th>Area</th> -->
+                <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+          
+
+   
+            <tr  *ngFor="let data of appointments">
+                <td>{{data.PatientName}}</td>
+                <td>{{data.DoctorName}}</td>
+                <td>{{data.Department}}</td>
+                <td>{{data.time}}</td>
+                <td>{{data.State}}</td>
+                <td>{{data.City}}</td>
+                <!-- <td>{{data.area}}</td> -->
+                <td>
+                  <button  [ngClass]="{'btn-complete': data.Status === 'Completed', 'btn-cancel': data.Status === 'Cancelled','btn-schedule':data.Status==='Rescheduled', 'btn-active':data.Status==='Active'}">
+                    {{data.Status}}
+                  </button>
+                  </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      </div>
+    
+        </div>
+  </div>
+</div>

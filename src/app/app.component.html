@@ -1,0 +1,8 @@
+<app-sidenav *ngIf="showSelector" (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+ <app-body
+    [collapsed]="isSideNavCollapsed"
+    [screenWidth]="screenWidth"
+></app-body> 
+
+<app-doctor-edit *ngIf="service.isLoading$ | async"></app-doctor-edit>
+<!-- <router-outlet></router-outlet> -->

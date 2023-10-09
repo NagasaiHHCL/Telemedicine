@@ -1,0 +1,363 @@
+.doctorpro{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 39px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #000000;
+}
+.arrowimg{
+    width: 22px;
+}
+.formcontainer{
+    background-color:  #F5F5F5 !important;
+}
+.personalinfo{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 33px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #192C51;
+}
+.aboutpara{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 26px;
+letter-spacing: -0.24px;
+
+color: #000000;
+    background: #FFFFFF;
+    border: 1px solid #D8D8D8;
+    border-radius: 6px;
+    padding:10px;
+}
+.abttxt{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 8px;
+letter-spacing: -0.24px;
+
+color: #2C2C2C;
+}
+
+::placeholder{
+    font-family: Hanken Grotesk;
+font-size: 16px;
+font-weight: 500;
+line-height: 26px;
+letter-spacing: -0.23999999463558197px;
+text-align: left;
+
+}
+
+.uploadbtn{
+    
+font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 25px;
+padding: 3px 20px;
+border: 2px solid #1E58FA;
+
+align-items: center;
+text-align: center;
+letter-spacing: -0.24px;
+
+color: #FFFFFF;
+background: #1E58FA;
+border-radius: 6px;
+}
+.removebtn{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 25px;
+/* identical to box height */
+padding: 3px 20px;
+background: #E0E0E0;
+
+border: 2px solid #E0E0E0;
+border-radius: 6px;
+align-items: center;
+text-align: center;
+letter-spacing: -0.24px;
+
+color: #000000;
+
+}
+.imagecircle{
+    border-radius: 50%;
+    width: 150px;
+}
+.profiletext{
+ 
+font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 20px;
+letter-spacing: -0.24px;
+
+color: #2C2C2C;
+}
+.imagetext{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 20px;
+letter-spacing: -0.24px;
+
+color: #5E5E5E;
+}
+label{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 3px;
+letter-spacing: -0.24px;
+
+color: #2C2C2C;
+}
+.rowdiv{
+    background: #FFFFFF;
+border: 1px solid #D2D2D2;
+border-radius: 16px;
+padding:26px ;
+}
+.qualificationtxt{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 33px;
+    /* identical to box height */
+    
+    letter-spacing: -0.24px;
+    
+    color: #192C51;
+}
+.addspl{
+    border-radius: 6px;
+    color: #1E58FA;
+    font-weight: bold;
+    
+}
+.delprofile{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+    
+    letter-spacing: -0.24px;
+    
+    color: #FA1E38;
+}
+.delabt{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: -0.24px;
+
+color: #5E5E5E;
+}
+.activebtn{
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.24px;
+  background: green !important;
+  border: 2px solid green !important; 
+  border-radius: 6px;
+  color: #FFFFFF;
+  padding: 6px 10px;
+}
+.delbutton{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 25px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.24px;
+background: #FA1E38;
+border: 2px solid #FA1E38;
+border-radius: 6px;
+color: #FFFFFF;
+padding: 6px 10px;
+}
+.timetxt{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 33px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #192C51;
+}
+.sessiondur{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 12px;
+letter-spacing: -0.24px;
+
+color: #2C2C2C;
+}
+.btnchange{
+
+padding: 6px 10px;
+border:2px solid #1E58FA;
+color: #FFF;
+background: #1E58FA;
+border-radius: 6px;
+font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 25px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.24px;
+
+color: #FFFFFF;
+
+}
+
+
+/* for hiding no file selected text */
+
+.file-upload {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .file-icon {
+    display: inline-block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .hidden-input {
+    display: none;
+  }
+  .multi-select {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .selected-values {
+    border: 1px solid #ccc;
+    padding: 5px;
+    min-height: 30px;
+  }
+  
+  .dropdown {
+    position: absolute;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: white;
+  }
+  
+  .option {
+    padding: 50px;
+    cursor: pointer;
+  }
+  
+  .checkbox {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #ccc;
+    margin-left: 5px;
+  }
+  
+  .checkbox.checked {
+    background-color: #007bff;
+  }
+  ul {
+    list-style-type: none;
+  }
+  .dropdown-list{
+    height: 200px;
+    overflow-y: scroll;
+  }
+
+  .upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+
+
+ 
+
+  font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 25px;
+padding: 3px 20px;
+border: 2px solid #1E58FA;
+
+align-items: center;
+text-align: center;
+letter-spacing: -0.24px;
+
+color: #FFFFFF;
+background: #1E58FA;
+border-radius: 6px;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.errortxt{
+  font-weight: bold;
+  color: red;
+}

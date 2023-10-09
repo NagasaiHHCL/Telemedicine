@@ -1,0 +1,103 @@
+<app-navbar></app-navbar>
+<div *ngIf="service.isLoading$ | async">Loading...</div>
+
+
+<div class="container-fluid p-4" style="background-color: #F8F9FA;">
+   
+    <div  class="stylediv container" >
+<h3 class="appointments">Appointments</h3>  
+        <button class="downloadbtn btn-lg"  [disabled]="!hasData" (click)="exportexcel()">Download</button>
+    
+       </div>
+   
+
+
+
+<div class="container p-2 mt-3" style="background-color: #FFFFFF;border-radius: 30px;">
+    <div >
+        
+      <div class="row mb-2" >
+        <div class="col-md-6 mt-2">
+            <h5 class="aplist ml-3">Appointments List </h5>
+            <small class="ml-3 listapp">{{data.length}} Appointments</small>
+        </div>
+        <!-- <div class="col-md-1"></div> -->
+        
+        <div class="col-md-3" style="margin-left: 8%;">
+            <input type="search" (click)="removeImage()"  [(ngModel)]="searchTerm" (ngModelChange)="applySearchFilter()" name="" class="form-control inputfield"  placeholder="        Search with name" id="">
+            <img  *ngIf="showImage"  src="../../assets/images/search 1 (1).svg" class="searchicon" alt="">
+            <!-- <i class="fas fa-search searchicon"></i> -->
+    
+        </div>
+        
+
+        <div class="col-md-2">
+          <div class="custom-select">
+      
+          <select class="form-select form-control inputfield" [(ngModel)]="selectedValue" (click)="getdoctorspecial()"   aria-label="Default select example">
+            <option class="option" value=0 selected>Specialization</option>
+            <option *ngFor="let data of spldata; let i=index" value={{data.DEPT_ID}}>{{data.DEPT_NAME}}</option>
+      
+          </select>
+          </div>
+            <!-- <select class="form-select form-control inputfield" [(ngModel)]="selectOption" 
+             (click)="getdoctorspecial()" aria-label="Default select example">
+                <option class="option" value="" selected>Category</option>
+      <option *ngFor="let data of spldata; let i=index" value={{data.ID}}>{{data.NAME}}</option>
+               
+              </select> -->
+        </div>
+  
+      </div>
+
+        
+      
+         
+        
+    </div>
+
+    <div class="customtable" id="exceltable">
+
+      <div *ngIf="this.data.length === 0">
+        <h4 class="nodata">No data to Display</h4>
+        </div>
+      <div *ngIf="this.data.length !== 0">
+      <table>
+        <thead>
+          <tr>
+            <th>S.No</th>  
+            <th>Appointment ID</th>
+            <th>Patient</th>
+            <th>Age & Gender</th>
+            <th>Mobile Number</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let data of data, let i=index">
+            <td>{{i+1}}</td>
+            <td>{{data.appointment_id}}</td>
+            <td>{{data.patientname}}</td>
+            <td>{{data.agegender}}</td>
+            <td>{{data.mobile}}</td>
+            <td>{{data.doctorname}}</td>
+            <td>{{data.date}}</td>
+            <td>{{data.time}}</td>
+            <td><span class="badge" [ngClass]="{'btn-complete': data.Status === 'Completed', 'btn-cancel': data.Status === 'Cancelled','btn-schedule':data.Status==='Rescheduled', 'btn-active':data.Status==='Active'}">
+              {{data.Status }}
+            </span> </td>
+          </tr>
+    
+        </tbody>
+      </table>
+      </div>
+    </div>
+  
+    
+   
+</div>
+</div>
+

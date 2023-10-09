@@ -1,0 +1,375 @@
+.doctorpro{
+    background-color:#192C51 ;
+    border-radius: 24px 24px 0px 0px;
+}
+.doctorp{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 39px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #000000;
+}
+.txtreview{
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+ 
+  /* identical to box height */
+  
+  letter-spacing: -0.24px;
+  
+  color: #000000;
+}
+
+.arrowimg{
+  width: 18px;
+}
+.doctorinfo{
+    color: #fff;
+}
+.editbtn:hover{
+    color:#fff;
+}
+.editbtn{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top:30px;
+    /* identical to box height */
+    padding: 10px 5px;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.24px;
+    
+    color: #FFFFFF;
+    background: #1E58FA;
+    border-radius: 8px;
+}
+.headers{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+margin-top: 20px;
+letter-spacing: -0.24px;
+
+color: #192C51;
+
+}
+.special{
+  font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 800;
+font-size: 20px;
+line-height: 33px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #192C51;
+}
+.daystyle{
+  font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 170.8%;
+letter-spacing: -0.24px;
+color: #737373;
+display: flex;
+gap: 40px;
+}
+.datecolor{
+  width: 150px;
+}
+.answers{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 15px;
+letter-spacing: -0.24px;
+
+color: #5E5E5E;
+}
+
+nav a{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 23px;
+line-height: 30px;
+/* identical to box height */
+flex-wrap: nowrap;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.24px;
+color: #000;
+}
+.reviewbox{
+    width: 32%;
+    height: 130px;
+    background: #FFFFFF;
+    border: 1px solid hsl(0, 0%, 92%);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 4px;
+}
+.timecolor{
+    
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 170.8%;
+
+  
+  letter-spacing: -0.24px;
+  
+  color: #1E58FA;
+}
+.sessiondur{
+  font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+line-height: 23px;
+
+
+letter-spacing: -0.24px;
+
+color: #192C51;
+}
+.tab1 {
+  font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 30px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.24px;
+
+color: #262626;
+}
+.timecolor1{
+  font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 12px;
+/* identical to box height, or 38px */
+
+letter-spacing: -0.24px;
+
+color: #1E58FA;
+}
+.leftarrow{
+  font-size: 20px;
+}
+
+/* for tab sysytem css */
+/* body {
+    color: #666;
+    font: 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+  } */
+  .tabs {
+    max-width: 538px;
+  }
+  .tabs-nav li {
+    float: left;
+    width: 50%;
+  }
+  .tabs-nav li:first-child a {
+    border-right: 0;
+    border-top-left-radius: 6px;
+  }
+  .tabs-nav li:last-child a {
+    border-top-right-radius: 6px;
+  }
+  a{
+    color: #0087cc;
+    display: block;
+    font-weight: 600;
+    width: 100%;
+     padding: 10px 100px; 
+    text-align: center !important;
+    text-decoration: none;
+  }
+  .arrowbtn{
+   text-align: left !important;
+   padding: 1px;
+  }
+  .arrowbtn:hover{
+    background-color: #F8F9FA;
+   
+   }
+  a:hover {
+    color: #fff;
+    background-color: #1E58FA;
+  }
+ 
+  .tab-active a {
+    background: #fff;
+    border-bottom-color: transparent;
+    color: #2db34a;
+    cursor: default;
+  }
+  .tabs-stage {
+    border: 1px solid #cecfd5;
+    border-radius: 0 0 6px 6px;
+    border-top: 0;
+    clear: both;
+    padding: 24px 30px;
+    position: relative;
+    top: -1px;
+  }
+  .star-rating {
+    display: inline-block;
+  }
+  
+  .star-rating span {
+    font-size: 20px;
+    color: gray;
+  }
+  
+  .star-rating span.filled {
+    color: gold;
+  }
+  .fa-star.active {
+    color: #ffce00;
+    background-color: #fff;
+  }
+  .infopara{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 121.3%;
+/* or 22px */
+
+letter-spacing: -0.24px;
+
+color: #242424;
+  }
+  ul li{
+    width: 33.3% !important;
+  }
+  .phnum{
+    font-family: Hanken Grotesk;
+font-size: 18px;
+font-weight: 600;
+line-height: 13px;
+letter-spacing: -0.23999999463558197px;
+text-align: left;
+
+  }
+  .dremail{
+    font-family: Hanken Grotesk;
+font-size: 16px;
+font-weight: 500;
+line-height: 12px;
+letter-spacing: -0.23999999463558197px;
+text-align: left;
+
+  }
+  .imagecircle{
+    border-radius: 50%;
+    width: 150px;
+}
+  .drname1{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 1px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #FFFFFF;
+  }
+
+  .drname{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+letter-spacing: -0.24px;
+
+color: #000000;
+  }
+.starnum{
+  
+font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 26px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: rgba(25, 44, 81, 0.69);
+}
+.reviewt{
+  font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 800;
+font-size: 20px;
+line-height: 33px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #192C51;
+}
+  .leftarrow{
+    font-size: 30px;
+  }
+nav{
+  border-radius: 17px;
+}
+.textpara{
+  font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 22px;
+letter-spacing: -0.24px;
+
+color: #5E5E5E;
+}
+  /* Mobile responsive */
+
+  @media only screen and (max-width:565px){
+    a{
+      padding: 10px 10px;
+    }
+  }
+
+  .active{
+     background: #1E58FA;
+     color:#fff;
+  }
+  #timetable,#reviews, #about{
+    background-color: #ffffff;
+    
+  }
+ 

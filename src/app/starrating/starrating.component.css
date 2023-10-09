@@ -1,0 +1,12 @@
+.star-rating {
+    font-size: 24px;
+  }
+  
+  .fa-star {
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .fa-star.active {
+    color: #ffce00;
+  }

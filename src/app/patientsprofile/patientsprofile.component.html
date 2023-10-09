@@ -1,0 +1,231 @@
+<app-navbar></app-navbar>
+<div *ngIf="service.isLoading$ | async">Loading...</div>
+
+<div class="container" style="background-color: #F8F9FA;">
+
+    <div class="p-3">
+       <a routerLink="/patients"> 
+        <img src="../../assets/images/arrow-left 1.svg" class="imgleft" alt="">
+    </a>
+          <h4 class="doctorp">Patients & Patient Profile</h4>
+      </div>
+
+
+
+      <div class="row mt-1">
+        <div class="col-md-6">
+            <div class="divrow p-4">
+            <h4 class="personalinfo">Personal Information</h4>
+            <div class="row mt-3">
+                <div class="col-md-2 mr-3">
+                   
+                  <ng-container *ngIf="profiledata?.profile?.img === null || profiledata?.profile?.img === 'null'; else imgTemplate">
+                    <img src="../../assets/images/dummy-image.jpg" class="patimg" width="94px"  alt="dummyimage">
+                  </ng-container>
+                  <ng-template #imgTemplate>
+                    <img  width="94px" class="imagecircle" src="http://172.19.1.75:8081/{{profiledata?.profile?.img}}" alt="">
+                  </ng-template>
+                    <!-- <img src="../../assets/images/Group 136.png" class="imground" width="90px" alt=""> -->
+                </div>
+                <div class="col-md-7 mt-2">
+                    <h5 class="patname">{{profiledata?.profile?.patient_name}}</h5>
+                    <h6 class="mobnum">{{profiledata?.profile?.mobile}}</h6>
+                    <h6 class="mobnum">abc@yopmail.com</h6>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-6 mt-1">
+                    <label for="">Age</label>
+                    <h6 class="labans">{{profiledata.profile?.age}} years</h6>
+                </div>
+
+                <div class="col-md-6 mt-1">
+                    <label for="">Gender</label>
+                    <h6 class="labans">{{profiledata.profile?.gender}}</h6>
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="">Height</label>
+                    <h6 class="labans">{{profiledata.profile?.height}} Feet</h6>
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="">Weight</label>
+                    <h6 class="labans">{{profiledata.profile?.weight}} kgs</h6>
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="">Blood Group</label>
+                    <h6 class="labans">{{profiledata.profile?.blood_group}}</h6>
+                </div>
+            </div>
+        </div>
+       
+        </div>
+ <div class="col-md-6">
+            <div class="divrow p-4">
+            <h5 class="appointmenthist">Appointment History</h5>
+            <h6 class="appoint">{{profiledata.appointmentsHistory?.length}} Appointments</h6>
+          <div class="sub">
+            <div  *ngFor="let data of appointments">
+                <!-- [class.selected]="data.appointment_id === selectedAppointmentId" -->
+                <div class="row p-1 appointcard" (click)="onItemClick(data.appointment_id)" 
+                [ngClass]="{'selected': data.appointment_id === selectedAppointmentId}"
+                >
+                    <div class="col-md-3 mt-2">
+                        <!-- <img src="http://172.19.1.75:8081/{{data.img}}" class="patimg" width="64px"  alt=""> -->
+                        <ng-container *ngIf="data.img === null || data.img === 'null'; else imgTemplate">
+                            <img src="../../assets/images/dummy-image.jpg" class="patimg" width="64px"  alt="">
+                          </ng-container>
+                          <ng-template #imgTemplate>
+                            <img src="http://172.19.1.75:8081/{{data.img}}" class="patimg" width="64px" alt="">
+                          </ng-template>
+                    
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="doctortxt mt-3">Dr.{{data.doctor_name}}</h6>
+                        <h6 class="timetxt">Appointment ID:{{data.appointment_id}}</h6> 
+
+                        <p class="timetxt">{{data.appointment_session}}</p> 
+                    </div>
+                    <div class="col-md-3">
+                        <img src="../../assets/images/eye.svg"   class="eyeimg mt-5" alt="">
+
+                    </div>
+                </div>
+               
+
+            <!-- <div class="" >
+                <div class="col-md-2 p-1 ml-3">
+                    <img src="{{data.img}}" width="74px"  alt="">
+                </div>
+                <div class="col-md-9">
+                    <h6 class="doctortxt mt-3">{{data.doctor_name}}</h6>
+                    <p class="timetxt">{{data.appointment_session}}</p>
+                </div>
+            </div> -->
+        </div>
+        </div>
+            <!-- <div class="row mt-2">
+                <div class="col-md-2 ml-3 p-1">
+                    <img src="../../assets/images/doc2.png" width="74px" alt="">
+                </div>
+                <div class="col-md-9 mt-2">
+                    <h6 class="doctortxt mt-3">Dr.Watson</h6>
+                    <p class="timetxt">08 April 2023    10:30 PM</p>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-2 ml-3 p-1">
+                    <img src="../../assets/images/doc3.png" width="74px" alt="">
+                </div>
+                <div class="col-md-9 mt-2">
+                    <h6 class="doctortxt mt-3">Dr.Watson</h6>
+                    <p class="timetxt">08 April 2023    10:30 PM</p>
+                </div>
+            </div> -->
+        </div>
+        </div>
+      </div>
+
+    <div class="mt-4" style="background-color: #F8F9FA;; display: flex; justify-content: space-between;">
+        
+        <div class="col-md-4 w-100">
+            <div class="divrow p-4 divcol">
+            <h6 class="medhistori mb-4">Medical History</h6>
+            <!-- <p class="medhistory">{{profiledata.medicalHistory?.length}} Medical History</p> -->
+            
+            <!-- <h6 class="medill mt-4">Medical Illness Name</h6> -->
+          <div class="p-1" *ngFor="let data of medicalHistory,let i=index">
+            <p class="sympt" >{{i+1}}.{{data}}.</p>
+          </div>
+            <!-- <p class="sympt mb-4">Asthma.</p> -->
+            <br>
+        </div>
+    </div>
+<div class="col-md-8">
+    <div class="row" >
+        <div class="col-md-6 w-100">
+            <div class="divrow divcol">
+            <h6 class="medreports">Medical Reports</h6>
+            <!-- <p class="medhistory">{{profiledata.medicalReports?.length}} Medical History</p> -->
+            <div *ngIf="viewpatientsdata">
+                <div *ngIf="this.pdfData1.length == 0">
+<p class="casesheet">No Data to display</p>
+                </div>
+                <div *ngIf="this.pdfData1.length !== 0">
+
+            <div class="row mt-1" *ngFor="let data of pdfData1;let i=index" >
+                <div class="col-md-2 mr-3">
+                    <img src="../../assets/images/Group 149.png"  width="55px"  alt="">
+                </div>
+                <div class="col-md-7 mt-2" >
+                    
+                   <!-- <h6 class="ewrfc">{{data.filename}}</h6> -->
+                   <h6 class="ewrfc mt-1">{{data.testname}}</h6> 
+                </div>
+                <div class="col-md-2 mt-3">
+                    <img src="../../assets/images/eye.svg" (click)="showPdf(i)"  class="eyeimg" alt="">
+                    <a *ngIf="pdfUrl" [href]="pdfUrl" download="converted.pdf">Download PDF</a>
+                </div>
+
+            </div>  
+             </div>
+        </div>
+        <div  *ngIf="!viewpatientsdata">
+<h5 class="p-2">Click on appointment ID in appointment history to view the reports</h5>
+        </div>
+    </div>
+    </div>
+    <div class="w-100 col-md-6" >
+        <div class="divrow divcol">
+<h6 class="casesheet">Case sheet</h6>
+<!-- <p class="medhistory">{{profiledata.caseSheets?.length}} Medical History</p> -->
+<div  *ngIf="viewpatientsdata">
+    <div *ngIf="this.casesheets.length == 0">
+   <p class="casesheet">No Data to Display</p>
+        </div>
+        <div *ngIf="this.casesheets.length == 0">
+
+<div class="row mt-1" *ngFor="let data of casesheets;let i=index">
+    <div class="col-md-2 mr-3">
+        <img src="../../assets/images/Group 149.png" width="55px"  alt="">
+    </div>
+    <div class="col-md-7 mt-3">
+        
+       <h6 class="ewrfc">{{data.filename}}</h6>
+       <h6 class="datetxt">08 April 2023</h6>
+    </div>
+    <div class="col-md-2 mt-1">
+        <img src="../../assets/images/eye.svg" (click)="showPdf(i)"  class="eyeimg" alt="">
+    </div>
+</div>
+</div>
+</div>
+
+<div  *ngIf="!viewpatientsdata">
+    <h5 class="p-2">Click on appointment ID in appointment history to view the reports</h5>
+            </div>
+<!-- <div class="row mt-2">
+    <div class="col-md-2 mr-3">
+        <img src="../../assets/images/Group 149.png" width="55px"  alt="">
+    </div>
+    <div class="col-md-7 mt-3">
+        
+        <h6 class="ewrfc">
+            RERWEFEF
+        </h6>
+        <h6 class="datetxt">08April 2023</h6>
+    </div>
+    <div class="col-md-2 mt-3">
+        <img src="../../assets/images/eye.svg" class="eyeimg" alt="">
+    </div>
+</div> -->
+        </div>
+    </div>
+   
+</div>
+
+      
+    </div>
+  
+</div>
+

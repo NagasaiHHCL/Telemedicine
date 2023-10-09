@@ -1,0 +1,10 @@
+<div class="star-rating">
+    <span *ngFor="let star of starList; let i = index">
+      <i class="fa fa-star" [ngClass]="{'active': star}"></i>
+    </span>
+    <span *ngFor="let star of starList1; let i = index">
+      <i class="fa fa-star" [ngClass]="{'active': star}"></i>
+    </span>
+  </div>
+
+  

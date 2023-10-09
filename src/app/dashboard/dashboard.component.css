@@ -1,0 +1,392 @@
+
+.dashboard{
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 30px;
+}
+.boldtext{
+  
+font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 800;
+font-size: 27px;
+line-height: 35px;
+letter-spacing: -0.24px;
+
+color: #000000;
+}
+.lowertxt{
+  font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 27px;
+line-height: 35px;
+display: flex;
+align-items: center;
+letter-spacing: -0.24px;
+
+color: #000000;
+
+}
+.boldtext a{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 800;
+font-size: 20px;
+line-height: 35px;
+display: flex;
+align-items: center;
+letter-spacing: -0.24px;
+text-decoration: none;
+color: #000000;
+}
+.imglogo{
+    width: 70px;
+}
+.searchicon{
+    top: 10px;
+    position: absolute;
+    left: 20px;
+    font-size: 20px;
+}
+
+
+.h5tag{
+    white-space: nowrap ;
+}
+
+.customtable {
+    height: 350px;
+    overflow-y: scroll;
+    position: relative;
+  }
+  
+  .customtable table {
+    position: relative;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .customtable td, .customtable th {
+    padding: 0.25em;
+  }
+  
+  .customtable thead th {
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    top: 0;
+    background: #EEEEEE;;
+    color:#000;
+    z-index: 1;
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 26px;
+letter-spacing: -0.24px;
+  border-bottom:  1px solid #EAEAEA;
+color: #000000;
+  }
+  .customtable tbody td {
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    top: 0;
+    background: #fff;
+    color: #000;
+    z-index:0px;
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 26px;
+/* identical to box height */
+border-bottom:  1px solid #EAEAEA;
+letter-spacing: -0.24px;
+padding: 15px 5px;
+
+color: #000000;
+
+  }
+
+  .sortby{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 31px;
+letter-spacing: -0.24px;
+white-space: nowrap ;
+margin-top: 9px;
+color: #555555;
+margin-right: 15px;
+  }
+  select{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 12px;
+    letter-spacing: -0.24px;
+    z-index: 1;
+    color: #000000;
+    
+  }
+  .inputfield{
+    background: #FFFFFF;
+    border: 1px solid #CFCFCF;
+    border-radius: 6px;
+    padding: 5px 10px;
+    height: 40px;
+    width: 140px !important;
+    margin-top: 5px;
+  }
+
+  
+
+  .welcometext{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 43px;
+    /* identical to box height */
+    
+    letter-spacing: -0.24px;
+    
+    color: #000000;
+  }
+
+  ::placeholder {
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size:17px;
+    line-height: 26px;
+    /* identical to box height */
+    
+    letter-spacing: -0.24px;
+    
+    color: #000000;
+  }
+  select{
+    font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 12px;
+  /* identical to box height */
+  
+  letter-spacing: -0.24px;
+  
+  color: #000000;
+  background: #FFFFFF;
+  border: 1px solid #CFCFCF;
+  border-radius: 13px;
+  }
+  
+.option{
+  font-family: Hanken Grotesk;
+font-size: 20px;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: -0.23999999463558197px;
+text-align: left;
+color: #000000;
+}
+  @media only screen and (max-width:565px){
+    .displayfl{
+        display: flex;
+        flex-direction: column;
+    }
+    .juscon{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+  }
+  
+  .juscon{
+    margin-bottom: 5px;
+  }
+
+.boldtext{
+  font-weight: 600;
+  color: #000;
+  font-size: 18px;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 20px;
+}
+.boldtext:hover{
+  box-shadow: 0px 10px 11px 0px rgba(0, 0, 0, 0.06);
+
+}
+.boldtext a{
+  font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 20px;
+display: flex;
+align-items: center;
+letter-spacing: -0.24px;
+text-decoration: none;
+color: #000000;
+}
+.imglogo{
+  width: 70px;
+}
+.searchicon{
+  top: 10px;
+  position: absolute;
+  left: 20px;
+  font-size: 20px;
+}
+.todayapp{
+  font-weight: 600;
+font-size: 20px;
+line-height: 10px;
+letter-spacing: -0.24px;
+color: #000000;
+}
+.belowtxt{
+  font-weight: 600;
+font-size: 15px;
+line-height: 10px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #555555;
+}
+.displayfl{
+  display: flex;
+  justify-content: space-between;
+}
+.h5tag{
+  white-space: nowrap ;
+}
+.nodata{
+  text-align: center;
+  margin-top: 10%;
+}
+
+
+/* component.css */
+.btn-complete {
+  color: #1E58FA;
+  background-color: rgba(30, 88, 250, 8%);
+
+  width: 80px;
+
+      border-radius:6px;
+      padding:8px 4px;
+      font-weight: 500;
+       border: 1px solid #1E58FA; 
+}
+
+.btn-cancel {
+  color: #FF0000;
+  background-color: rgba(255, 0, 0, 8%);
+
+  width: 80px;
+      border-radius:6px;
+      padding:8px 4px;
+
+      font-weight: 500;
+       border: 1px solid #FF0000; 
+}
+  .btn-schedule{
+    width: 80px;
+
+    background-color: rgba(30, 171, 250, 8%);
+
+     color: #1EABFA;
+     padding:8px 4px;
+    font-weight: 500;
+     border: 1px solid #1EABFA; 
+  }
+  .btn-active{
+    width: 80px;
+
+
+color: #29BC26;
+background-color: rgba(41, 188, 38, 8%);
+    border-radius:6px;
+    padding:8px 4px;
+
+    font-weight: 500;
+     border: 1px solid #29BC26; 
+  }
+
+  
+.custom-select {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  height: 45px;
+
+	padding: 0;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+.custom-select:hover {
+	border-color: #999;
+}
+
+.custom-select:before {
+	color: #333;
+	display: block;
+	font-family: 'FontAwesome';
+	font-size: 1em;
+	height: 100%;
+	line-height: 2.5em;
+
+	position: absolute;
+	top: 0;
+	right: 100px;
+	text-align: center;
+	width: 1em;
+	z-index: -1;
+}
+
+.custom-select select {
+	background-color: transparent;
+	border: 0 none;
+	box-shadow: none;
+	color: #333;
+	display: block;
+	font-size: 100%;
+	line-height: normal;
+	margin: 0;
+	padding: .5em;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.custom-select select::-ms-expand {
+	display: none; /* to ie 10 */
+}
+
+.custom-select select:focus {
+	outline: none;
+}
+
+/* little trick for custom select elements in mozilla firefox  17/06/2014 @rodrigoludgero */
+
+/* pseudo class https://developer.mozilla.org/en-US/docs/Web/CSS/:any */
+
+:-moz-any(.custom-select):before {
+	background-color: #fff; /* this is necessary for overcome the caret default browser */
+	pointer-events: none; /* https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events  */
+	z-index: 1; /* this is necessary for overcome the pseudo element */
+}

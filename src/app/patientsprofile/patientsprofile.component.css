@@ -1,0 +1,295 @@
+.container{
+    background-color: #F5F5F5;
+}
+.divrow{
+   
+    border: 1px solid #D2D2D2;
+    
+    padding:25px ;
+    background: #FFFFFF;
+border-radius: 24px;
+}
+.casesheet{
+    
+font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 700;
+font-size: 19px;
+line-height: 12px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #192C51;
+}
+.medhistory{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 12px;
+letter-spacing: -0.24px;
+
+color: #585858;
+
+}
+.patimg{
+    border-radius: 50%;
+}
+.ewrfc{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 15px;
+    /* identical to box height */
+    
+    letter-spacing: -0.24px;
+    
+    color: #000000;
+
+}
+.datetxt{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 8px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #686868;
+}
+.medreports{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 10px;
+    /* identical to box height */
+    
+    letter-spacing: -0.24px;
+    
+    color: #192C51;
+    
+}
+.medhistory{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 12px;
+    letter-spacing: -0.24px;
+    
+    color: #585858;
+}
+.medhistori{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 10px;
+    /* identical to box height */
+    
+    letter-spacing: -0.24px;
+    
+    color: #192C51;
+    
+
+}
+.medill{
+  
+font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 29px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #818181;
+
+}
+.sympt{
+   
+font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 6px;
+letter-spacing: -0.24px;
+
+color: #2C2C2C;
+}
+.doctortxt{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 15px;
+    /* identical to box height */
+    
+    letter-spacing: -0.24px;
+    
+    color: #000000;
+    
+    
+}
+.timetxt{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 15px;
+    /* identical to box height */
+    
+    letter-spacing: -0.24px;
+    
+    color: #686868;
+    
+}
+.sub {
+   
+    justify-content: center; 
+    max-height: 260px !important;
+    min-height: 260px;
+   overflow-y: scroll;
+   overflow-x: hidden;
+  }
+.appointmenthist{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    /* identical to box height */
+    
+    letter-spacing: -0.24px;
+    margin: 0;
+
+ 
+    color: #192C51;
+}
+.appoint{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 600;
+font-size: 16px;
+line-height: 25px;
+letter-spacing: -0.24px;
+
+color: #585858;
+}
+.personalinfo{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    /* identical to box height */
+    
+    letter-spacing: -0.24px;
+    
+    color: #192C51;
+}
+.patname{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    /* identical to box height */
+    
+    letter-spacing: -0.24px;
+    
+    color: #2C2C2C;
+}
+.mobnum{
+  margin: 0;
+  padding: 06;
+font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #4D4D4D;
+}
+label{
+  
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 15px;
+    /* identical to box height */
+    
+    letter-spacing: -0.24px;
+    
+    color: #818181;
+}
+.labans{
+   
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 11px;
+    /* identical to box height */
+    
+    letter-spacing: -0.24px;
+    
+    color: #2C2C2C;
+}
+.leftarrow{
+    color: #000000;
+    font-size: 26px !important;
+}
+.doctorp{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 39px;
+    /* identical to box height */
+    
+    letter-spacing: -0.24px;
+    
+    color: #000000;
+    
+}
+.imground{
+    border-radius:50%;
+}
+.leftarrow{
+    font-size: 27px;
+}
+.imgleft{
+    width: 26px;
+}
+
+.eyeimg{
+    width: 15px;
+}
+.appointcard.selected {
+    background-color: #1E58FA; 
+  
+  }
+  .row.p-1.appointcard.selected p, .row.p-1.appointcard.selected h6 {
+    color: white;
+  }
+  
+  .appointcard{
+    border-radius: 10px;
+  }
+  .divcol{
+    min-height: 180px;
+    max-height: 180px; /* Adjust the height as needed */
+    overflow-y: auto; 
+   
+  }

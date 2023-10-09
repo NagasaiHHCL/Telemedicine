@@ -1,0 +1,133 @@
+/* .navbar{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+} */
+
+.imglog{
+    width: 60px;
+}
+.h6tag{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #000000;
+}
+.dropdown a{
+    cursor: pointer;
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 12px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #000000;
+}
+#navbarContent{
+    position: absolute;
+    right: 5%;
+    top:2%;
+}
+.searchicon{
+    position: absolute;
+    left: 5.5%;
+    top: 34%;
+font-size:18px ;
+}
+#searchfield{
+    
+    padding : 20px 30px;
+    width: 400px;
+    height: 45px;
+}
+
+
+nav {
+
+    background: #F8F9FA;
+    border-bottom: 1px solid #C9C9C9;
+    padding:15px;
+ }
+
+ .inputf{
+    border-radius: 8px;
+ }
+
+/* .dropdown-menu{
+    background-color: #000000;
+} */
+.dropdown-menu :hover {
+    cursor:grab/pointer;
+
+    background-color: #000000;
+    background-color: #fff;
+}
+.dropdown-item :hover {
+    color: #fff;
+ }
+ .dropdown-item{
+    color: #fff;
+    
+ }
+@media only screen and (max-width:565px){
+    #navbarContent{
+        position: relative;
+        text-align: center;
+    }
+    #searchfield{
+        padding : 10px 10px;
+        width: 200px;
+    }
+    .searchicon{
+        position: fixed;
+        left: 36%;
+        top: 1%;
+    font-size:25px ;
+    }
+    .imgser{
+        position: absolute;
+        top:36%;
+        left:8% !important;
+        width: 18px;
+    }
+}
+
+::placeholder{
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 12px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #000000;
+
+}
+@media only screen and (min-width:768px){
+    #searchfield{
+        margin-left: 5px;
+        position: relative;
+    }
+}
+
+.imgser{
+    position: absolute;
+    top:40%;
+    left:4%;
+    width: 18px;
+}
+.dropdown-menu {
+    cursor: pointer !important;
+    transform: translate(-20px, 20px); /* Move the dropdown menu right and down */
+}

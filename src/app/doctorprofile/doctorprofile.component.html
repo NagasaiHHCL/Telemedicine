@@ -1,0 +1,197 @@
+<div *ngIf="service.isLoading$ | async">Loading...</div>
+
+<app-navbar></app-navbar>
+<div class="container" style="background-color: #F8F9FA">
+    
+    <div class="mt-3">
+      <a class="arrowbtn" routerLink="/doctors">
+     <img src="../../assets/images/arrow-left 1.svg" class="arrowimg" alt="">
+    </a>
+        <h4 class="doctorp">Doctor Profile</h4>
+    </div>
+    
+    <div class="doctorpro p-4">
+    
+    <div class="row">
+        <div class="col-md-2">
+       <ng-container *ngIf="overviewData.overview?.img === null || overviewData.overview?.img === 'null'; else imgTemplate">
+    <img src="../../assets/images/dummy-image.jpg" class="imagecircle" width="150px"  alt="">
+  </ng-container>
+  <ng-template #imgTemplate>
+    <img src="http://192.168.30.223:8000/TeleMedicine{{overviewData.overview?.img}}" class="imagecircle" width="150px" alt="">
+  </ng-template>
+      </div>
+        <div class="col-md-2 doctorinfo">
+            <h4 class="drname1 mt-4">{{overviewData.overview?.name}}</h4>
+            <h6 class="Specialization">{{overviewData.overview?.dept_name}}</h6> 
+            <br>
+            <h6 class="phnum">{{overviewData.overview?.mobile}}</h6>
+            <h6 class="dremail">{{overviewData.overview?.email}}</h6> 
+          
+        </div>
+        <div class="col-md-6"></div>
+        <div class="col-md-2">
+            <a routerLink="/doctoredit/{{overviewData.overview?.id}}" (click)="doctoredit(overviewData.overview?.id)" class="editbtn">Edit</a>
+        </div>
+    </div>
+    
+    </div>
+    <div class="container p-3" style="background-color: #fff;">
+    <div role="tabpanel container p-5" style="border: 1px solid lightgray;margin-top:10px; border-radius: 17px;background-color:#F2F2F2;">
+    
+        <ul class="nav nav-tabs nav-justified nav-tabs-dropdown" role="tablist" style="display: flex;justify-content: space-between;">
+          <li role="presentation"><a class="tab1 active" style="border-radius: 17px 0px 0px 17px;" href="#about" aria-controls="home" role="tab" data-toggle="tab">Overview</a></li>
+          <li role="presentation"><a href="#reviews" class="tab1" aria-controls="about" role="tab" data-toggle="tab">Reviews</a></li>
+          <li role="presentation" ><a href="#timetable" class="tab1" style="border-radius: 0px 17px 17px 0px;" aria-controls="products" role="tab" data-toggle="tab">Time Table</a></li>
+            
+        </ul>
+    </div>
+    <!-- <div class="container mt-3">
+        <nav class="nav nav-pills flex-column flex-sm-row" >
+            <a onclick="about()" id="aboutbtn"  class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Over view</a>
+            <a onclick="reviews()" id="reviewsbtn" class="flex-sm-fill text-sm-center nav-link" href="#">Reviews</a>
+            <a onclick="timetable()" id="timetablebtn"  class="flex-sm-fill text-sm-center nav-link" href="#">Time Table</a>
+          </nav>
+    
+       
+          
+    </div> -->
+    
+    
+    <div class="tab-content p-2">
+        <div role="tabpanel" class="tab-pane active" id="about">
+    
+            <div class="about p-3">
+                <h4 class="headers">About </h4>
+<p class="textpara">
+  {{overviewData.overview?.about}}
+</p>            
+                <h4 class="headers">Specialization</h4>
+            
+                <h5 class="answers">{{overviewData.overview?.dept_name}}</h5>
+                <h4 class="headers">Experience</h4>
+                <h5 class="answers">{{overviewData.overview?.experience}} Years</h5>
+                <h4 class="headers">Fee Per Session</h4>
+                <h5 class="answers">Rs.{{overviewData.overview?.cost}}</h5>
+            </div>
+            
+    
+        </div>
+        <div role="tabpanel" class="tab-pane p-3" id="reviews">
+          <h4 class="reviewt">Reviews       <i class="fa fa-star active"></i>
+            ({{reviews.count?.avg_rating}})<small class="starnum"> {{reviews.count?.reviews_count}}</small></h4>
+
+            <div class="row mt-2" id="reviews">
+                <div class="reviewbox" *ngFor="let data of reviewst">
+                  <div style="display: flex;justify-content: space-between;">
+                    <h5 class="drname">{{data.patient_name}}</h5>
+                    
+                    <!-- <h6>Dec 12</h6> -->
+                    <h5> <app-starrating rating="{{data.rating}}"></app-starrating> </h5>
+                    
+                   
+
+                    </div> 
+                    <p class="txtreview">{{data.review_date}}</p>
+                    <p class="infopara">
+{{data.comments}}
+                    </p>
+                    </div>
+                    <!-- <div class="reviewbox" >
+                      <div style="display: flex;justify-content: space-between;">
+                        <h5 class="drname">Bharath</h5>
+                        <h5> <app-starrating [rating]="4"></app-starrating> </h5>
+                        </div> 
+                        <p class="infopara">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsum enim asperiores, distinctio minima ratione cumque animi voluptate, 
+    
+                        </p>
+                        </div>
+                        <div class="reviewbox" >
+                          <div style="display: flex;justify-content: space-between;">
+                            <h5 class="drname">Bharath</h5>
+                            <h5> <app-starrating [rating]="4"></app-starrating> </h5>
+                            </div> 
+                            <p class="infopara">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsum enim asperiores, distinctio minima ratione cumque animi voluptate, 
+        
+                            </p>
+                            </div>
+                            <div class="reviewbox" >
+                              <div style="display: flex;justify-content: space-between;">
+                                <h5 class="drname">Bharath</h5>
+                                <h5> <app-starrating [rating]="4"></app-starrating> </h5>
+                                </div> 
+                                <p class="infopara">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsum enim asperiores, distinctio minima ratione cumque animi voluptate, 
+            
+                                </p>
+                                </div>
+                                <div class="reviewbox" >
+                                  <div style="display: flex;justify-content: space-between;">
+                                    <h5 class="drname">Bharath</h5>
+                                    <h5> <app-starrating [rating]="4"></app-starrating> </h5>
+                                    </div> 
+                                    <p class="infopara">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsum enim asperiores, distinctio minima ratione cumque animi voluptate, 
+                
+                                    </p>
+                                    </div>
+                                    <div class="reviewbox" >
+                                      <div style="display: flex;justify-content: space-between;">
+                                        <h5 class="drname">Bharath</h5>
+                                        <h5> <app-starrating [rating]="4"></app-starrating> </h5>
+                                        </div> 
+                                        <p class="infopara">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsum enim asperiores, distinctio minima ratione cumque animi voluptate, 
+                    
+                                        </p>
+                                        </div>
+                                        <div class="reviewbox" >
+                                          <div style="display: flex;justify-content: space-between;">
+                                            <h5 class="drname">Bharath</h5>
+                                            <h5> <app-starrating [rating]="4"></app-starrating> </h5>
+                                            </div> 
+                                            <p class="infopara">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsum enim asperiores, distinctio minima ratione cumque animi voluptate, 
+                        
+                                            </p>
+                                            </div>
+                                            <div class="reviewbox" >
+                                              <div style="display: flex;justify-content: space-between;">
+                                                <h5 class="drname">Bharath</h5>
+                                                <h5> <app-starrating [rating]="4"></app-starrating> </h5>
+                                                </div> 
+                                                <p class="infopara">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsum enim asperiores, distinctio minima ratione cumque animi voluptate, 
+                            
+                                                </p>
+                                                </div> -->
+
+            
+            </div>
+            
+            
+    
+        </div>
+          <div role="tabpanel" class="tab-pane mt-2 p-3" id="timetable">
+            <div id="timetable" *ngFor="let data of timetable">
+                <h5 class="special">Specialization</h5>
+                 <div class="daystyle"><span class="datecolor">Monday</span>  <span class="timecolor"> {{data.from}} - {{data.to}}</span></div> 
+                 <div class="daystyle"><span class="datecolor">Tuesday</span> <span class="timecolor">  {{data.from}} - {{data.to}}</span></div>
+                 <div class="daystyle"><span class="datecolor">Wednesday</span> <span class="timecolor"> {{data.from}} - {{data.to}} </span></div>
+                 <div class="daystyle"><span class="datecolor">Thursday</span> <span class="timecolor">  {{data.from}} - {{data.to}} </span></div>
+                <div class="daystyle"><span class="datecolor">Friday</span> <span class="timecolor">  {{data.from}} - {{data.to}} </span></div>
+                 <div class="daystyle"><span class="datecolor">Saturday</span> <span class="timecolor">  {{data.from}} - {{data.to}} </span></div>
+                 <div class="daystyle"><span class="datecolor">Sunday</span><span class="timecolor">{{data.from}} - {{data.to}} </span></div> 
+                 <h5 class="sessiondur mt-3">Session Duration</h5>
+                 <h6 class="timecolor1">{{data.sessionTime}} MIN</h6>
+            </div>
+    
+        </div>
+     </div>
+    
+    </div>
+    
+    </div>
+    

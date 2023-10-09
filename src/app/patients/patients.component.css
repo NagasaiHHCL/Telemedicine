@@ -1,0 +1,185 @@
+.patients{
+  font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 39px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #000000;
+
+}
+.patientslist{
+  font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 1px;
+letter-spacing: -0.24px;
+color: #000000;
+}
+.inputfield{
+  height: 45px;
+  background: #FFFFFF;
+border: 1px solid #CFCFCF;
+border-radius: 8px;
+width: 250px;
+}
+span{
+  height: 50px;
+}
+.patientnum{
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: -10px;
+  letter-spacing: -0.24px;
+  color: #000000;
+
+}
+::placeholder{
+  font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 12px;
+padding-left: 20px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #000000;
+}
+
+.downloadbtn{
+  
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.24px;
+  float: right;
+  color: #FFFFFF;
+  padding: 10px 2 5px;
+  background: #1E58FA;
+  border: 1px solid #1E58FA;
+  border-radius: 8px;
+}
+
+.headpart{
+    display: flex;
+    justify-content: space-between;
+
+}
+.tabledata{
+  border-radius: 30px;
+    background-color: #fff;
+}
+.searchicon{
+  top: 32.1%;
+  position: absolute;
+  right: 23%;
+  width: 18px;
+}
+
+select{
+  font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 26px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #000000;
+background: #FFFFFF;
+border: 1px solid #CFCFCF;
+border-radius: 8px;
+}
+@media only screen and (max-width:565px){
+    .searchicon{
+      position: absolute;
+      top: 48.5%;
+      left: 19%;
+        font-size: 20px;
+    }
+}
+
+
+
+.customtable {
+    height: 350px;
+    overflow-y: scroll;
+    position: relative;
+  }
+  
+  .customtable table {
+    position: relative;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .customtable td, .customtable th {
+    padding: 0.25em;
+  }
+  
+  .customtable thead th {
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    top: 0;
+    background: #EEEEEE;;
+    color:#000;
+    z-index: 1;
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 26px;
+letter-spacing: -0.24px;
+  border-bottom:  1px solid #EAEAEA;
+color: #000000;
+  }
+  .customtable tbody td {
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    top: 0;
+    background: #fff;
+    color: #000;
+    z-index:0px;
+    font-family: 'Hanken Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 26px;
+/* identical to box height */
+border-bottom:  1px solid #EAEAEA;
+letter-spacing: -0.24px;
+padding: 15px 5px;
+
+color: #000000;
+
+  }
+
+  .eyeimg{
+  width: 18px;
+  }
+
+  .nodata{
+    text-align: center;
+    margin-top: 10%;
+  }
+  @media only screen and (max-width:565px){
+    .headpart{
+      display: flex;
+      flex-direction: column;
+  
+  }
+  }

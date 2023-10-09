@@ -1,0 +1,43 @@
+.body-content{
+    min-height: 100vh !important;
+}
+.head_dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+.head_dashboard h3{
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+span.logo-img {
+    display: none;
+}
+/* .logo {
+    background-color: #f6f6f6 !important;
+} */
+span.brand-name img{
+    width: 70%;
+}
+
+img.login_img {
+    width: 220px;
+}
+
+body.sticky-header {
+    background: #000;
+}
+@media only screen and (min-width:700px) {
+    span.logo-img {
+        display: none;
+    }
+}
